@@ -48,3 +48,5 @@ Testing/*
 .buckconfig.local
 BUCKAROO_DEPS
 .vscode/settings.json
+/bin
+/bin-int

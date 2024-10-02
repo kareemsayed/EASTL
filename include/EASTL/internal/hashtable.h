@@ -1090,6 +1090,9 @@ namespace eastl
 		iterator       find(const key_type& key);
 		const_iterator find(const key_type& key) const;
 
+		bool contains(const key_type& k) const;
+
+
 		// missing transparent key support:
 		// template<typename K>
 		// iterator       find(const K& key);
@@ -1780,6 +1783,16 @@ namespace eastl
 		return pNode ? const_iterator(pNode, mpBucketArray + n) : const_iterator(mpBucketArray + mnBucketCount); // iterator(mpBucketArray + mnBucketCount) == end()
 	}
 
+	template <typename Key, typename Value, typename Allocator, typename ExtractKey, typename Equal, typename H1,
+		typename H2, typename H, typename RehashPolicy, bool bCacheHashCode, bool bMutableIterators, bool bUniqueKeys>
+	bool hashtable<Key, Value, Allocator, ExtractKey, Equal, H1, H2, H, RehashPolicy, bCacheHashCode, bMutableIterators,
+	bUniqueKeys>::contains(const key_type& k) const
+	{
+		const hash_code_t c = get_hash_code(k);
+		const size_type n = (size_type)bucket_index(k, c, (uint32_t)mnBucketCount);
+		node_type* const pNode = DoFindNode(mpBucketArray[n], k, c);
+		return pNode != NULL;
+	}
 
 
 	template <typename K, typename V, typename A, typename EK, typename Eq,

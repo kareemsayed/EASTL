@@ -38,6 +38,9 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
+#define EASTL_USER_CONFIG_HEADER <Hazel/Core/EASTLConfig.h>
+
+
 #ifdef EASTL_USER_CONFIG_HEADER
 	#include EASTL_USER_CONFIG_HEADER
 #endif
@@ -1515,6 +1518,7 @@ typedef EASTL_SSIZE_T eastl_ssize_t; // Signed version of eastl_size_t. Concept 
 //     };
 //
 ///////////////////////////////////////////////////////////////////////////////
+#define EASTL_ALLOCATOR_EXPLICIT_ENABLED 1
 
 #ifndef EASTL_ALLOCATOR_EXPLICIT_ENABLED
 	#define EASTL_ALLOCATOR_EXPLICIT_ENABLED 0
@@ -1615,7 +1619,7 @@ typedef EASTL_SSIZE_T eastl_ssize_t; // Signed version of eastl_size_t. Concept 
 #endif
 
 #ifndef EASTLAllocatorType
-	#define EASTLAllocatorType eastl::allocator
+#define EASTLAllocatorType Hazel::Allocator
 #endif
 
 #ifndef EASTLDummyAllocatorType

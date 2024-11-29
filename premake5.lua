@@ -8,7 +8,7 @@ project "EASTL"
 
 	includedirs {
 		"include/",
-		"build/_deps/eabase-src/include/Common",  -- Created using cmake
+		"EABase/include/Common",  -- Created using cmake
 		"../../src/" -- Hazel/src
 		-- "../EABase-2.09.05/include/Common"
 	}

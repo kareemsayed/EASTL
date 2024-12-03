@@ -331,10 +331,10 @@ namespace eastl
 
 
 	template <>
-	inline Hazel::Allocator* get_default_allocator(const Hazel::Allocator*)
+	inline Beyond::Allocator* get_default_allocator(const Beyond::Allocator*)
 	{
 		// Return a global or thread-local instance of your allocator
-		static Hazel::Allocator myDefaultAllocator;
+		static Beyond::Allocator myDefaultAllocator;
 		return &myDefaultAllocator;
 	}
 

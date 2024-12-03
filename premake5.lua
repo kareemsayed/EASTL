@@ -9,7 +9,7 @@ project "EASTL"
 	includedirs {
 		"include/",
 		"EABase/include/Common",  -- Created using cmake
-		"../../src/" -- Hazel/src
+		"../../src/" -- Beyond/src
 		-- "../EABase-2.09.05/include/Common"
 	}
 

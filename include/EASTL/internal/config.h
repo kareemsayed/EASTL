@@ -38,7 +38,7 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
-#define EASTL_USER_CONFIG_HEADER <Hazel/Core/EASTLConfig.h>
+#define EASTL_USER_CONFIG_HEADER <Beyond/Core/EASTLConfig.h>
 
 
 #ifdef EASTL_USER_CONFIG_HEADER
@@ -1619,7 +1619,7 @@ typedef EASTL_SSIZE_T eastl_ssize_t; // Signed version of eastl_size_t. Concept 
 #endif
 
 #ifndef EASTLAllocatorType
-#define EASTLAllocatorType Hazel::Allocator
+#define EASTLAllocatorType Beyond::Allocator
 #endif
 
 #ifndef EASTLDummyAllocatorType

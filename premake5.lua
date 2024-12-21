@@ -27,6 +27,8 @@ project "EASTL"
 	{
 		"include/**.h",
 		"source/**.cpp",
+
+		"doc/EASTL.natvis"
 	}
 
 	filter "system:windows"
